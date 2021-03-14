@@ -37,7 +37,7 @@ CREATE TABLE company
  cmp_logo VARCHAR(200),
  cmp_name VARCHAR(20) PRIMARY KEY,
  cmp_email VARCHAR(20),
- no_of_bikes INT(200),
+ no_of_bikes INT(200) DEFAULT 0,
  cmp_address VARCHAR(200),
  cmp_desc VARCHAR(1000)
  ) ;
