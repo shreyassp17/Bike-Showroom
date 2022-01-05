@@ -9,18 +9,6 @@ c_dob DATE,
 c_password VARCHAR(20)
 ) ; 
 
-
-CREATE TABLE admin
-(
-a_username VARCHAR(20) PRIMARY KEY,
-f_name VARCHAR(20),
-l_name VARCHAR(20),
-a_phone BIGINT(12),
-email VARCHAR(30),
-a_dob DATE,
-password VARCHAR(20)
-) ;
-
 CREATE TABLE admin
 (
 a_username VARCHAR(20) PRIMARY KEY,
@@ -80,7 +68,7 @@ SET no_of_bikes =no_of_bikes+1
 WHERE cmp_name = new.company;
 
 
---Trigger to decrement the no_of_bikes attribute of company table by 1 when a bike information is removed from the bikes table.
+-- Trigger to decrement the no_of_bikes attribute of company table by 1 when a bike information is removed from the bikes table.
 CREATE TRIGGER remove_bike
 AFTER DELETE ON bikes
 FOR EACH ROW
